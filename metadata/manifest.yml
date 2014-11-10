@@ -1,0 +1,31 @@
+---
+Name: xyz
+Display-Name: Xyz 1.0.0
+Description: "Xyz is ..."
+Cartridge-Short-Name: YXZ
+Cartridge-Version: '0.0.1'
+Compatible-Versions: ['0.0.1']
+Cartridge-Vendor: tsystems
+Version: '1.0.0'
+Versions: ['1.0.0']
+Website: http://
+License: GPL
+Vendor: Xyz Vendor
+Categories:
+  - service
+  - java
+  - web_framework
+Scaling:
+  Min: 1
+  Max: 1
+Provides:
+  - xyz-1.0.0
+  - xyz
+Endpoints:
+  - Private-IP-Name:   HTTP_IP
+    Private-Port-Name: HTTP_PORT
+    Public-Port-Name:  HTTP_PROXY_PORT
+    Private-Port:      8181	
+    Mappings:
+      - Frontend:      "/"
+      - Backend:       "/"

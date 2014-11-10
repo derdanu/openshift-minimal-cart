@@ -1,0 +1,48 @@
+#!/bin/bash -eu
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+VERSION=1.0.0
+BIN_HOME=$OPENSHIFT_XYZ_DIR/versions/$VERSION
+
+function start {
+  echo "Starting xyz cartridge"
+  $BIN_HOME/bin/start
+  client_result "Xyz runnning at https://$OPENSHIFT_XYZ_HTTP_IP:$OPENSHIFT_XYZ_HTTP_PROXY_PORT"
+  exit $?
+ }
+
+function stop {
+  echo "Stopping xyz cartridge"
+  $BIN_HOME/bin/stop
+  exit $?
+}
+
+function restart {
+  stop
+  start
+}
+
+function status {
+  $BIN_HOME/bin/status
+  exit $?
+}
+
+function catchall {
+    echo "not yet implemented"
+}
+
+case "$1" in
+  start)       start ;;
+  stop)        stop ;;
+  restart)     restart ;;
+  status)      status ;;
+  reload)      catchall ;;
+  tidy)        catchall ;;
+  pre-build)   catchall ;;
+  build)       catchall ;;
+  deploy)      catchall ;;
+  post-deploy) catchall ;;
+  *)           exit 0
+esac
+
+exit 0
