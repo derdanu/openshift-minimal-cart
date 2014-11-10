@@ -2,7 +2,7 @@
 Name: xyz
 Display-Name: Xyz 1.0.0
 Description: "Xyz is ..."
-Cartridge-Short-Name: YXZ
+Cartridge-Short-Name: XYZ
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.1']
 Cartridge-Vendor: tsystems
