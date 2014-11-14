@@ -7,7 +7,6 @@ BIN_HOME=$OPENSHIFT_XYZ_DIR/versions/$VERSION
 function start {
   echo "Starting xyz cartridge"
   $BIN_HOME/bin/start
-  client_result "Xyz runnning at https://$OPENSHIFT_XYZ_HTTP_IP:$OPENSHIFT_XYZ_HTTP_PROXY_PORT"
   exit $?
  }
 
